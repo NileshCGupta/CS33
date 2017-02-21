@@ -1,0 +1,13 @@
+void transpose (int *dst, int *src, int dim)
+{
+	int *x, *y, *row, *col;
+	int dim2 = dim * dim;
+	row = dst + dim;
+	for (x = dst; x < row; x++){
+	    col = x + dim2;
+	    	for (y = x; y < col; y += dim){
+		       *y = *(src++);
+		       	  }
+	 }
+}
+
